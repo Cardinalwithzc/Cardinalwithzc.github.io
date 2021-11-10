@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python笔记，与C++的不同之处, ZESTC">
+    <meta name="keywords" content="python笔记, ZESTC">
     <meta name="description" content="每一份纯真与美好，都是生命存在的意义">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>python笔记，与C++的不同之处 | ZESTC</title>
+    <title>python笔记 | ZESTC</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -379,12 +379,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python笔记，与C++的不同之处</h1>
+                    <h1 class="description center-align post-title">python笔记</h1>
                 </div>
             </div>
         </div>
@@ -544,14 +544,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-07
+                    2021-11-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    34
+                    135
                 </div>
                 
 
@@ -582,7 +582,30 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>学习地点：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=1&amp;spm_id_from=pageDriver">花了2万多买的Python教程全套，现在分享给大家，入门到精通(Python全栈开发教程)</a></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3><span id="字典">字典</span></h3><p>原理：对键值进行hash函数查询到对应位置key-&gt;value</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span>创建
+scores<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'Jack'</span><span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token string">'John'</span><span class="token punctuation">:</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token string">'Mike'</span><span class="token punctuation">:</span><span class="token number">99</span><span class="token punctuation">}</span><span class="token operator">//</span>花括号创建
+score<span class="token operator">=</span><span class="token builtin">dict</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'Jack'</span><span class="token punctuation">,</span>point<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token operator">//</span>内置函数创建
+<span class="token operator">//</span>
+scores<span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">]</span>
+scores<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">)</span>
+scores<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span>
+<span class="token operator">//</span>
+<span class="token keyword">del</span> scores<span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">]</span>
+scores<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+scores<span class="token punctuation">[</span><span class="token string">'Micheal'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">100</span>
+<span class="token operator">//</span>
+scores<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+scores<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span>
+scores<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">//</span>元组
+<span class="token operator">//</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> scores<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token operator">//</span>
+name<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">,</span><span class="token string">'John'</span><span class="token punctuation">,</span><span class="token string">'Mike'</span><span class="token punctuation">]</span>
+score<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">]</span>
+lst<span class="token operator">=</span><span class="token builtin">zip</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>score<span class="token punctuation">)</span>
+scores<span class="token operator">=</span><span class="token punctuation">{</span>nam<span class="token punctuation">:</span>sco <span class="token keyword">for</span> name<span class="token punctuation">,</span>score <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>score<span class="token punctuation">)</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -926,16 +949,16 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/%E6%9B%B4%E6%96%B0%E4%B8%AD/">
+                        <span class="chip bg-color">更新中</span>
+                    </a>
+                    
                     <a href="/tags/%E4%BC%A4%E6%84%9F/">
                         <span class="chip bg-color">伤感</span>
                     </a>
                     
                     <a href="/tags/%E4%B9%90%E8%A7%82/">
                         <span class="chip bg-color">乐观</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9B%B4%E6%96%B0%E4%B8%AD/">
-                        <span class="chip bg-color">更新中</span>
                     </a>
                     
                     <a href="/tags/%E6%8A%91%E9%83%81/">
@@ -1179,7 +1202,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             

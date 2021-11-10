@@ -395,7 +395,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -416,19 +418,19 @@
                 
                 
                 
-                <a href="/categories/%E5%BE%80%E4%BA%8B/" title="往事: 1">
+                <a href="/categories/%E7%9F%A5%E8%AF%86/" title="知识: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">往事
-                        <span class="tag-length">1</span>
+                            style="background-color: #F9EBEA;">知识
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E7%9F%A5%E8%AF%86/" title="知识: 1">
+                <a href="/categories/%E5%BE%80%E4%BA%8B/" title="往事: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">知识
+                            style="background-color: #F5EEF8;">往事
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -494,7 +496,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"往事","max":2},{"name":"知识","max":2},{"name":"身边的事","max":2},{"name":"心里的事","max":2}],
+            indicator: [{"name":"知识","max":3},{"name":"往事","max":3},{"name":"身边的事","max":3},{"name":"心里的事","max":3}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -505,7 +507,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,1,1,1],
+                    value : [2,1,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -589,7 +591,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             

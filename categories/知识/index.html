@@ -395,7 +395,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -416,19 +418,19 @@
                 
                 
                 
-                <a href="/categories/%E5%BE%80%E4%BA%8B/" title="往事: 1">
+                <a href="/categories/%E7%9F%A5%E8%AF%86/" title="知识: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">往事
-                        <span class="tag-length">1</span>
+                             chip-active "
+                            style="background-color: #F9EBEA;">知识
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E7%9F%A5%E8%AF%86/" title="知识: 1">
+                <a href="/categories/%E5%BE%80%E4%BA%8B/" title="往事: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F5EEF8;">知识
+                             chip-default "
+                            style="background-color: #F5EEF8;">往事
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -465,19 +467,73 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/11/05/2021-11-5-python%E7%AC%94%E8%AE%B0%EF%BC%8C%E4%B8%8EC++%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84/">
+                    <a href="/2021/11/08/2021-11-8-%E7%94%B5%E6%9C%BA%E6%8B%96%E5%8A%A8%E5%9F%BA%E7%A1%80/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python笔记，与C++的不同之处">
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="电机拖动基础">
                             
-                            <span class="card-title">python笔记，与C++的不同之处</span>
+                            <span class="card-title">电机拖动基础</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                以C++、C为基础学习Python，简记Python的不同之处，以便于以后复习观看
+                                电拖笔记，啦啦啦啦，学不动就是你的锅
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    知识
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                            <span class="chip bg-color">知识</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%9B%B4%E6%96%B0%E4%B8%AD/">
+                            <span class="chip bg-color">更新中</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%94%B5%E6%8B%96/">
+                            <span class="chip bg-color">电拖</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/11/05/2021-11-5-python%E7%AC%94%E8%AE%B0%EF%BC%8C%E4%B8%8EC++%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="python笔记">
+                            
+                            <span class="card-title">python笔记</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                有C为基础学习Python，记Python的不同之处，以便于以后复习观看
                             
                         </div>
                         <div class="publish-info">
@@ -597,7 +653,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             

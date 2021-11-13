@@ -544,21 +544,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-08
+                    2021-11-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    135
+                    470
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -582,31 +582,63 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>学习地点：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=1&amp;spm_id_from=pageDriver">花了2万多买的Python教程全套，现在分享给大家，入门到精通(Python全栈开发教程)</a></p>
-<h3><span id="字典">字典</span></h3><p>原理：对键值进行hash函数查询到对应位置key-&gt;value</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span>创建
-scores<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'Jack'</span><span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token string">'John'</span><span class="token punctuation">:</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token string">'Mike'</span><span class="token punctuation">:</span><span class="token number">99</span><span class="token punctuation">}</span><span class="token operator">//</span>花括号创建
-score<span class="token operator">=</span><span class="token builtin">dict</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'Jack'</span><span class="token punctuation">,</span>point<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token operator">//</span>内置函数创建
-<span class="token operator">//</span>
-scores<span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">]</span>
-scores<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">)</span>
-scores<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span>
-<span class="token operator">//</span>
-<span class="token keyword">del</span> scores<span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">]</span>
-scores<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
-scores<span class="token punctuation">[</span><span class="token string">'Micheal'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">100</span>
-<span class="token operator">//</span>
-scores<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
-scores<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span>
-scores<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">//</span>元组
-<span class="token operator">//</span>
+<h3><span id="字典">字典</span></h3><p>对键值进行hash函数查询到对应位置key-&gt;value</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建</span>
+scores<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'Jack'</span><span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token string">'John'</span><span class="token punctuation">:</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token string">'Mike'</span><span class="token punctuation">:</span><span class="token number">99</span><span class="token punctuation">}</span><span class="token comment">#花括号创建</span>
+score<span class="token operator">=</span><span class="token builtin">dict</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'Jack'</span><span class="token punctuation">,</span>point<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token comment">#内置函数创建</span>
+<span class="token comment">#value值获取</span>
+scores<span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">]</span><span class="token comment">#若无报error</span>
+scores<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">)</span><span class="token comment">#若无返回false</span>
+scores<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token comment">#若无返回x值</span>
+<span class="token comment">#删除与清除</span>
+<span class="token keyword">del</span> scores<span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">]</span><span class="token comment">#删除键</span>
+scores<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#清空字典</span>
+scores<span class="token punctuation">[</span><span class="token string">'Micheal'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">100</span><span class="token comment">#更改、增加建值</span>
+<span class="token comment">#获取列表</span>
+scores<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#键的列表</span>
+scores<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#值的列表</span>
+scores<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#以元组为元素的列表</span>
+<span class="token comment">#字典的遍历</span>
 <span class="token keyword">for</span> i <span class="token keyword">in</span> scores<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-<span class="token operator">//</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token comment">#i为键</span>
+<span class="token comment">#字典生成式</span>
 name<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Jack'</span><span class="token punctuation">,</span><span class="token string">'John'</span><span class="token punctuation">,</span><span class="token string">'Mike'</span><span class="token punctuation">]</span>
 score<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">]</span>
 lst<span class="token operator">=</span><span class="token builtin">zip</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>score<span class="token punctuation">)</span>
 scores<span class="token operator">=</span><span class="token punctuation">{</span>nam<span class="token punctuation">:</span>sco <span class="token keyword">for</span> name<span class="token punctuation">,</span>score <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>score<span class="token punctuation">)</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3><span id="元组">元组</span></h3><p>不可变序列</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建</span>
+t<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'pyhton'</span><span class="token punctuation">,</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token comment">#可不加小括号</span>
+t<span class="token operator">=</span><span class="token builtin">tuple</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'pyhton'</span><span class="token punctuation">,</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#内置函数创建</span>
+t<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'world'</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token comment">#单元素元组必须加小括号和逗号</span>
+<span class="token comment">#元组中的列表</span>
+t<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token comment">#其余元素不可改动，但列表中的元素可以改动</span>
+<span class="token comment">#元组的遍历</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> t<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3><span id="集合">集合</span></h3><p>没有value的字典，无序</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建</span>
+s<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">}</span><span class="token comment">#实际集合为s={1,2,3,4,5,6}</span>
+s<span class="token operator">=</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#强制转换为集合</span>
+<span class="token comment">#增</span>
+s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token comment">#单个添加</span>
+s<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#一个及以上，可为元组、字典、列表等，强制转换后添加</span>
+<span class="token comment">#删</span>
+s<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#单个删除，无则报错</span>
+s<span class="token punctuation">.</span>discard<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#单个删除，但不报错</span>
+s<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#无参数，去掉地址中的第一个元素，但因为集合无序，因此并非集合中的第一个元素</span>
+s<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#集合的关系</span>
+s1<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">}</span>
+s2<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span>
+s1<span class="token operator">==</span>s2
+s1<span class="token operator">!=</span>s2
+s1<span class="token punctuation">.</span>issubset<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#s1是否为s2子集</span>
+s1<span class="token punctuation">.</span>issuperset<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#s2是否为s1子集</span>
+s1<span class="token punctuation">.</span>isdisjoint<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#s1、s2是否有交集</span>
+<span class="token comment">#</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -633,7 +665,7 @@ scores<span class="token operator">=</span><span class="token punctuation">{</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Cardinalwithzc.github.io/2021/11/05/2021-11-5-python%E7%AC%94%E8%AE%B0%EF%BC%8C%E4%B8%8EC++%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84/">http://Cardinalwithzc.github.io/2021/11/05/2021-11-5-python%E7%AC%94%E8%AE%B0%EF%BC%8C%E4%B8%8EC++%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84/</a>
+                    <a href="http://Cardinalwithzc.github.io/2021/11/05/2021-11-5-python%E7%AC%94%E8%AE%B0/">http://Cardinalwithzc.github.io/2021/11/05/2021-11-5-python%E7%AC%94%E8%AE%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1202,7 +1234,7 @@ scores<span class="token operator">=</span><span class="token punctuation">{</sp
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">4.2k</span>&nbsp;字
             
             
             

@@ -544,21 +544,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-13
+                    2021-12-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    470
+                    791
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -582,6 +582,11 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>学习地点：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=1&amp;spm_id_from=pageDriver">花了2万多买的Python教程全套，现在分享给大家，入门到精通(Python全栈开发教程)</a></p>
+<h3><span id="列表">列表</span></h3><p>。。。。。。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
 <h3><span id="字典">字典</span></h3><p>对键值进行hash函数查询到对应位置key-&gt;value</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建</span>
 scores<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'Jack'</span><span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token string">'John'</span><span class="token punctuation">:</span><span class="token number">71</span><span class="token punctuation">,</span><span class="token string">'Mike'</span><span class="token punctuation">:</span><span class="token number">99</span><span class="token punctuation">}</span><span class="token comment">#花括号创建</span>
@@ -638,7 +643,51 @@ s1<span class="token operator">!=</span>s2
 s1<span class="token punctuation">.</span>issubset<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#s1是否为s2子集</span>
 s1<span class="token punctuation">.</span>issuperset<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#s2是否为s1子集</span>
 s1<span class="token punctuation">.</span>isdisjoint<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#s1、s2是否有交集</span>
-<span class="token comment">#</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#集合的数学操作</span>
+s1<span class="token punctuation">.</span>intersection<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#交集</span>
+s1<span class="token operator">&amp;</span>s2
+s1<span class="token punctuation">.</span>union<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#并集</span>
+s1<span class="token operator">|</span>s2
+s1<span class="token punctuation">.</span>difference<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#差集</span>
+s1<span class="token operator">-</span>s2
+s1<span class="token punctuation">.</span>symmetric_difference<span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token comment">#对称差集</span>
+s1<span class="token operator">^</span>s2
+<span class="token comment">#集合生成式</span>
+s<span class="token operator">=</span><span class="token punctuation">{</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3><span id="字符串">字符串</span></h3><p>不可变字符序列</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建</span>
+s<span class="token operator">=</span><span class="token string">'Python Python Python'</span><span class="token comment">#""、''''''</span>
+<span class="token comment">#查找</span>
+s<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'yt'</span><span class="token punctuation">)</span><span class="token comment">#第一个，无 报错</span>
+s<span class="token punctuation">.</span>rindex<span class="token punctuation">(</span><span class="token string">'yt'</span><span class="token punctuation">)</span><span class="token comment">#最后一个，无 报错</span>
+s<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'yt'</span><span class="token punctuation">)</span><span class="token comment">#第一个，无 回-1</span>
+s<span class="token punctuation">.</span>rfind<span class="token punctuation">(</span><span class="token string">'yt'</span><span class="token punctuation">)</span><span class="token comment">#最后一个，无 回-1</span>
+<span class="token comment">#大小写</span>
+s<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#全大写</span>
+s<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#全小写</span>
+s<span class="token punctuation">.</span>swapcase<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#大小写切换</span>
+s<span class="token punctuation">.</span>capitalize<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#首字母大写其余小写</span>
+s<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#每个单词首字母大写，其余小写</span>
+<span class="token comment">#对齐</span>
+s<span class="token punctuation">.</span>center<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token comment">#居中对齐，宽度a，b填充，默认为空格</span>
+s<span class="token punctuation">.</span>ljust<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token comment">#左对齐，宽度不够返回原字符</span>
+s<span class="token punctuation">.</span>rjust<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token comment">#右对齐</span>
+s<span class="token punctuation">.</span>zfill<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token comment">#右对齐，0填充</span>
+<span class="token comment">#劈分</span>
+s<span class="token punctuation">.</span>split<span class="token punctuation">(</span>sep<span class="token operator">=</span><span class="token string">'y'</span>，maxsplit<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token comment">#默认sep为空格,maxsplit最大劈分次数</span>
+<span class="token comment">#判断</span>
+s<span class="token punctuation">.</span>isidentifier<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#是否合法</span>
+s<span class="token punctuation">.</span>isspace<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#是否全空字符（回车、换行、制表）</span>
+s<span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#全字母</span>
+s<span class="token punctuation">.</span>isdecimal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#全十进制数字</span>
+s<span class="token punctuation">.</span>isnumeric<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#数字（包括中文数字、罗马数字等）</span>
+s<span class="token punctuation">.</span>isalnum<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#字母和数字</span>
+<span class="token comment">#更改</span>
+s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Python'</span><span class="token punctuation">,</span><span class="token string">'Java'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token comment">#替换该字符串2次</span>
+lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token string">'java'</span><span class="token punctuation">,</span><span class="token string">'world'</span><span class="token punctuation">]</span>
+<span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token comment">#用空格连接列表或元组中的字符串</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -1225,7 +1274,7 @@ s1<span class="token punctuation">.</span>isdisjoint<span class="token punctuati
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <span id="year">2021</span>
             <a href="/about" target="_blank">Jiang Sir</a>
@@ -1234,7 +1283,7 @@ s1<span class="token punctuation">.</span>isdisjoint<span class="token punctuati
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.2k</span>&nbsp;字
+                class="white-color">4.6k</span>&nbsp;字
             
             
             
